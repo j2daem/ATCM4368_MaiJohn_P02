@@ -7,10 +7,11 @@ public class DialogueManager : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI _characterNameHolder;
     [SerializeField] private TextMeshProUGUI _dialogueHolder;
-    //[SerializeField] private Image _portraitHolder;
 
-    //private int _dialogueIndex = 0;
+    private int _dialogueIndex = 0;
     private bool _dialogueStarted = false;
+    /*private bool _dialogueEnded = false;
+    public bool DialogueEnded => _dialogueEnded;*/
     private Queue<string> sentences;
 
     public bool DialogueStarted => _dialogueStarted;
@@ -25,7 +26,6 @@ public class DialogueManager : MonoBehaviour
     {
         _dialogueStarted = true;
         _characterNameHolder.text = dialogueData.CharacterName;
-        //_portraitHolder.sprite = dialogueData.Portrait;
 
         sentences.Clear();
 
@@ -50,13 +50,7 @@ public class DialogueManager : MonoBehaviour
 
     public void EndDialogue()
     {
-        _dialogueStarted = false;
+        _dialogueStarted = true;
+        //_dialogueEnded = true;
     }
-
-    /*public void Display(DialogueData dialogueData)
-    {
-        _characterNameHolder.text = dialogueData.CharacterName;
-        _dialogueHolder.text = dialogueData.Dialogue(_dialogueIndex);
-        _portraitHolder.sprite = dialogueData.Portrait;
-    }*/
 }

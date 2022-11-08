@@ -5,29 +5,21 @@ using UnityEngine;
 public class DialogueController : MonoBehaviour
 {
     [SerializeField] DialogueManager _dialogueManager;
-    [SerializeField] DialogueData _heroData;
-    [SerializeField] DialogueData _bossData;
-
+    [SerializeField] DialogueData[] _dialogueArray;
+    private int _dialogueIndex;
     private DialogueData _activeDialogueData;
+    private bool _dialogueInitialized;
 
 
-    private void Start()
+    private void Awake()
     {
-        _activeDialogueData = _heroData;
+        _dialogueIndex = 0;
+        _activeDialogueData = _dialogueArray[_dialogueIndex];
     }
+
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Q))
-        {
-            _activeDialogueData = _heroData;
-        }
-
-        else if (Input.GetKeyDown(KeyCode.W))
-        {
-            _activeDialogueData = _bossData;
-        }
-
-        else if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             if (!_dialogueManager.DialogueStarted)
             {
