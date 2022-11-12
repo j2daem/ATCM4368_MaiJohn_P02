@@ -132,29 +132,15 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 81970231}
-  - component: {fileID: 81970230}
+  - component: {fileID: 81970233}
   - component: {fileID: 81970232}
   m_Layer: 0
-  m_Name: GameController
+  m_Name: LevelController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &81970230
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 81970229}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 36fe7c57fad9ed54a8cedc3054497898, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _characterNameHolder: {fileID: 1252602049}
-  _dialogueHolder: {fileID: 916231728}
 --- !u!4 &81970231
 Transform:
   m_ObjectHideFlags: 0
@@ -163,7 +149,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 81970229}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -182,10 +168,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 047c2104ee009574cab1fd62dda07f97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _dialogueManager: {fileID: 81970230}
+  _dialogueManager: {fileID: 81970233}
   _dialogueArray:
   - {fileID: 11400000, guid: 133183bf44627ae45b8916fd54abed09, type: 2}
   - {fileID: 11400000, guid: 91bae8fe7761a2c4abad923a82e91061, type: 2}
+--- !u!114 &81970233
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 81970229}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36fe7c57fad9ed54a8cedc3054497898, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _characterNameHolder: {fileID: 1252602049}
+  _dialogueHolder: {fileID: 916231728}
+  _continueDialogue: {fileID: 1787594266}
 --- !u!1 &488965787
 GameObject:
   m_ObjectHideFlags: 0
