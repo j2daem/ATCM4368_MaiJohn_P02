@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class MainState : MainMenuState
 {
     [SerializeField] int _mainMenuIndex = 0;
+    [SerializeField] Button _primaryButton;
 
     public override void Enter()
     {
@@ -15,6 +16,8 @@ public class MainState : MainMenuState
         }
 
         StateMachine.MenuPanels[_mainMenuIndex].SetActive(true);
+
+        _primaryButton.Select();
     }
 
     public override void Exit()

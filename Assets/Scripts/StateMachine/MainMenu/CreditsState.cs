@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CreditsState : MainMenuState
 {
     [SerializeField] int _creditsMenuIndex = 1;
+    [SerializeField] Button _primaryButton;
 
     public override void Enter()
     {
@@ -14,6 +16,8 @@ public class CreditsState : MainMenuState
         }
 
         StateMachine.MenuPanels[_creditsMenuIndex].SetActive(true);
+
+        _primaryButton.Select();
     }
 
     public override void Exit()

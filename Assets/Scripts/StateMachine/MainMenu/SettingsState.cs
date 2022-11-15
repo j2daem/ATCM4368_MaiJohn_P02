@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SettingsState : MainMenuState
 {
     [SerializeField] int _settingsMenuIndex = 2;
+    [SerializeField] Button _primaryButton;
 
     public override void Enter()
     {
@@ -14,6 +16,9 @@ public class SettingsState : MainMenuState
         }
 
         StateMachine.MenuPanels[_settingsMenuIndex].SetActive(true);
+
+
+        _primaryButton.Select();
     }
 
     public override void Exit()
