@@ -17,8 +17,8 @@ public class Health : MonoBehaviour
     #endregion
 
     #region Events
-    public event Action HealthUpdated;
-    public event Action Killed;
+    public event System.Action HealthUpdated;
+    public event System.Action Killed;
     #endregion
 
     #endregion

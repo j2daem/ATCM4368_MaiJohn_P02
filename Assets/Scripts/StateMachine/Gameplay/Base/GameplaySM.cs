@@ -4,5 +4,8 @@ using UnityEngine;
 
 public class GameplaySM : StateMachine
 {
-
+    private void Start()
+    {
+        ChangeState<PlayerTurnState>();
+    }
 }

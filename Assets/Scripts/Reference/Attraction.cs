@@ -18,8 +18,8 @@ public class Attraction : MonoBehaviour
     #endregion
 
     #region Events
-    public event Action AttractionUpdated;
-    public event Action FellInLove;
+    public event System.Action AttractionUpdated;
+    public event System.Action FellInLove;
     #endregion
 
     #endregion

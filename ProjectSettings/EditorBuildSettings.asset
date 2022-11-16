@@ -12,9 +12,10 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 61717a4e3553e0f4bb3805bba418f539
   - enabled: 1
-    path: Assets/Scenes/CutScene.unity
+    path: Assets/Scenes/CutScene_Intro.unity
     guid: f044a21ebb3fe6a46bb0de24d860c440
   - enabled: 1
     path: Assets/Scenes/Level01.unity
     guid: 4e9856105e6f34f40affa1c964e17d77
-  m_configObjects: {}
+  m_configObjects:
+    com.unity.input.settings: {fileID: 11400000, guid: c0d77165f8c0d554d86c516146790e33, type: 2}
