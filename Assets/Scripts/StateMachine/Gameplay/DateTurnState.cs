@@ -9,6 +9,7 @@ public class DateTurnState : GameplayState
 
     private void Awake()
     {
+        
     }
 
     public override void Enter()

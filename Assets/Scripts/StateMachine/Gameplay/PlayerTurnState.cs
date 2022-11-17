@@ -1,7 +1,6 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
@@ -42,7 +41,6 @@ public class PlayerTurnState : GameplayState
 
     public override void Enter()
     {
-
         _playerInput = FindObjectOfType<PlayerInput>();
 
         // Reveal player actions
@@ -111,6 +109,4 @@ public class PlayerTurnState : GameplayState
         }
     }
     #endregion
-
-
 }
