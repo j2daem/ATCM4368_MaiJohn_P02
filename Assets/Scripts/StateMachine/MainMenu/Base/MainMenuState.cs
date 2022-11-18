@@ -14,6 +14,6 @@ public class MainMenuState : State
 
     public void OnPressedBack()
     {
-        StateMachine.ChangeState<MainState>();
+        StateMachine.RevertState();
     }
 }

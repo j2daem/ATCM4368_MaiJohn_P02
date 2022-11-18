@@ -67,6 +67,8 @@ public class GameplayUIController : MonoBehaviour
                     Debug.Log("Action type not assigned to card.");
                     break;
             }
+
+            _deck[i].gameObject.SetActive(false);
         }
     }
 }

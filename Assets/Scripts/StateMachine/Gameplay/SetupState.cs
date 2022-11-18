@@ -14,7 +14,7 @@ public class SetupState : GameplayState
         if (_activated == false)
         {
             _activated = true;
-            StateMachine.ChangeState<PlayerTurnState>();
+            StateMachine.ChangeState<PlayerDrawCardsState>();
         }
     }
 

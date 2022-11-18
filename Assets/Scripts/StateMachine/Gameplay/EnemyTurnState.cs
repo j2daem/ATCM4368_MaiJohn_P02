@@ -33,6 +33,6 @@ public class EnemyTurnState : GameplayState
         // Enemy performs action
         EnemyTurnEnded?.Invoke();
 
-        StateMachine.ChangeState<PlayerTurnState>();
+        StateMachine.ChangeState<PlayerDrawCardsState>();
     }
 }

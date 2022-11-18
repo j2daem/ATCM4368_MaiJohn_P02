@@ -48,6 +48,7 @@ public abstract class StateMachine : MonoBehaviour
         InTransition = true;
 
         // Execute transition functions, the Exit for previous and Enter for new state
+        _previousState = _currentState;
         _currentState?.Exit();
         _currentState = newState;
         _currentState?.Enter();
