@@ -41,7 +41,7 @@ public class PlayerPlayCardsState : GameplayState
     {
         _playCardButton.interactable = false;
         _selectionBlocker.SetActive(true);
-        _playerTurnPanel.SetActive(false);
+        //_playerTurnPanel.SetActive(false);
         StateMachine.ChangeState<PlayerCardsEffectState>();
     }
     public void InitiateExit()

@@ -18,7 +18,7 @@ public class EnemyTurnState : GameplayState
 
     public override void Tick()
     {
-
+        
     }
 
     public override void Exit()

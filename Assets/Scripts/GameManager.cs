@@ -4,16 +4,22 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    #region Variables
+    [Header("References")]
     [SerializeField] List<Card> _deck = new List<Card>();
     [SerializeField] Transform[] _cardSlots;
+
+    [Header("Settings")]
     [SerializeField] int _cardsToPlay = 2;
 
     List<Card> _selectedCards = new List<Card>();
     List<Card> _playedCards = new List<Card>();
     List<Card> _discardDeck = new List<Card>();
-    private Card[] _cardsInHand;
+    private bool[] _availableCardSlots;
+    //private Card[] _cardsInHand;
     private int _currentHandSize;
     private int _maxHandSize;
+    #endregion
 
     #region Getters/Setters
     public List<Card> SelectedCards => _selectedCards;
@@ -27,15 +33,20 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
-        _cardsInHand = new Card[_cardSlots.Length];
+        _availableCardSlots = new bool[_cardSlots.Length];
 
-        for (int i = 0; i < _cardsInHand.Length; i++)
+        for (int i = 0; i < _availableCardSlots.Length; i++)
         {
-            _cardsInHand[i] = null;
+            _availableCardSlots[i] = true;
         }
 
         _currentHandSize = 0;
         _maxHandSize = _cardSlots.Length;
+    }
+
+    public void LoadCardEffects()
+    {
+
     }
 
     public void DrawCard()
@@ -46,13 +57,13 @@ public class GameManager : MonoBehaviour
 
             if (_deck.Count >= 1)
             {
-                for (int i = 0; i < _cardsInHand.Length; i++)
+                for (int i = 0; i < _availableCardSlots.Length; i++)
                 {
-                    if (_cardsInHand[i] == null)
+                    if (_availableCardSlots[i])
                     {
                         Debug.Log(selectedCard.CardName.text + " card drawn!");
 
-                        _cardsInHand[i] = selectedCard;
+                        _availableCardSlots[i] = false;
 
                         selectedCard.gameObject.SetActive(true);
                         selectedCard.transform.position = _cardSlots[i].position;

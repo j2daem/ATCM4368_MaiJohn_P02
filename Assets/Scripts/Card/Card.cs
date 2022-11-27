@@ -12,6 +12,7 @@ public enum ActionType
 
 public class Card : MonoBehaviour
 {
+
     [SerializeField] private ActionType _cardAction;
     [SerializeField] private TextMeshProUGUI _cardName;
     [SerializeField] private Image _cardBackground;
