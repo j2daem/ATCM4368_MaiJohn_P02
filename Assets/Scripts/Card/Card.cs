@@ -2,13 +2,13 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public enum ActionType
+/*public enum ActionType
 {
     chat,
     flirt,
     insult,
     joke
-}
+}*/
 
 public class Card : MonoBehaviour
 {

@@ -2,21 +2,30 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum ActionType
+{
+    chat,
+    flirt,
+    insult,
+    joke
+}
+
 public class GameManager : MonoBehaviour
 {
     #region Variables
     [Header("References")]
     [SerializeField] List<Card> _deck = new List<Card>();
     [SerializeField] Transform[] _cardSlots;
+    [SerializeField] int[] _cardStats;
 
     [Header("Settings")]
     [SerializeField] int _cardsToPlay = 2;
 
-    List<Card> _selectedCards = new List<Card>();
-    List<Card> _playedCards = new List<Card>();
-    List<Card> _discardDeck = new List<Card>();
+    private List<Card> _selectedCards = new List<Card>();
+    private List<Card> _playedCards = new List<Card>();
+    private List<Card> _discardDeck = new List<Card>();
+
     private bool[] _availableCardSlots;
-    //private Card[] _cardsInHand;
     private int _currentHandSize;
     private int _maxHandSize;
     #endregion
@@ -27,6 +36,7 @@ public class GameManager : MonoBehaviour
     public List<Card> DiscardDeck => _discardDeck;
     public int CurrentHandSize => _currentHandSize;
     public int MaxHandSize => _maxHandSize;
+    public int Damage { get; set; }
     #endregion
 
     public event Action CardsPlayed = delegate { };
@@ -42,11 +52,6 @@ public class GameManager : MonoBehaviour
 
         _currentHandSize = 0;
         _maxHandSize = _cardSlots.Length;
-    }
-
-    public void LoadCardEffects()
-    {
-
     }
 
     public void DrawCard()
@@ -103,5 +108,34 @@ public class GameManager : MonoBehaviour
         {
             Debug.Log("Too many cards selected.");
         }
+    }
+
+    public void LoadCardStats()
+    {
+        if (_cardStats.Length > 0)
+        {
+            for (int i = 0; i < _cardStats.Length; i++)
+            {
+                int random = UnityEngine.Random.Range(i, _cardStats.Length);
+                int arrayValue = _cardStats[random];
+                _cardStats[random] = _cardStats[i];
+                _cardStats[i] = arrayValue;
+
+                Debug.Log((ActionType)i + " has a value of " + _cardStats[i] + "!");
+            }
+        }
+    }
+
+    public void CalculateDamage()
+    {
+        ActionType firstCard = _playedCards[0].CardAction;
+        int firstCardEnumIndex = (int)firstCard;
+
+        ActionType secondCard = _playedCards[1].CardAction;
+        int secondCardEnumIndex = (int)secondCard;
+
+        Damage = _cardStats[firstCardEnumIndex] * _cardStats[secondCardEnumIndex];
+
+        Debug.Log(Damage.ToString() + " damaged dealt!");
     }
 }

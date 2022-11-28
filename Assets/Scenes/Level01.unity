@@ -1345,6 +1345,7 @@ RectTransform:
   m_Children:
   - {fileID: 863212493}
   - {fileID: 1883825427}
+  - {fileID: 2125897624}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1540,8 +1541,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -100}
-  m_SizeDelta: {x: 500, y: 50}
+  m_AnchoredPosition: {x: 0, y: -200}
+  m_SizeDelta: {x: 720, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &863212494
 MonoBehaviour:
@@ -1590,15 +1591,15 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 60
+  m_fontSizeBase: 60
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 1
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 256
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -2805,7 +2806,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1053004329}
-  - {fileID: 2125897624}
   m_Father: {fileID: 840833542}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2915,6 +2915,7 @@ MonoBehaviour:
   - {fileID: 914112280}
   - {fileID: 1637789899}
   - {fileID: 1478474213}
+  _cardStats: ffffffff000000000100000002000000
   _cardsToPlay: 2
 --- !u!1 &2125897623
 GameObject:
@@ -2928,12 +2929,12 @@ GameObject:
   - component: {fileID: 2125897626}
   - component: {fileID: 2125897625}
   m_Layer: 5
-  m_Name: PlayCardsEffect_txt
+  m_Name: PlayerCardsEffect_txt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2125897624
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2946,13 +2947,13 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1883825427}
-  m_RootOrder: 1
+  m_Father: {fileID: 840833542}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -99.888954}
-  m_SizeDelta: {x: 500, y: 50}
+  m_AnchoredPosition: {x: 0, y: -199.9272}
+  m_SizeDelta: {x: 720, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2125897625
 MonoBehaviour:
@@ -3001,8 +3002,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 60
+  m_fontSizeBase: 60
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -3061,9 +3062,11 @@ GameObject:
   m_Component:
   - component: {fileID: 2142343851}
   - component: {fileID: 2142343855}
+  - component: {fileID: 2142343857}
   - component: {fileID: 2142343853}
   - component: {fileID: 2142343852}
   - component: {fileID: 2142343856}
+  - component: {fileID: 2142343858}
   m_Layer: 0
   m_Name: StateMachine
   m_TagString: Untagged
@@ -3139,4 +3142,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b68809f47d46b4e4495799abb091fbf4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _playerReactionPanel: {fileID: 2125897623}
+  _playerCardEffects: {fileID: 2125897625}
+  _positiveReaction: 'Their health decreased by '
+  _negativeReaction: 'Their health increased by '
+  _neutralReaction: 'Their health changed by '
+  _reactionTurnLength: 2
+--- !u!114 &2142343857
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2142343850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 319016899e7536c4695f71200c0d7c45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2142343858
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2142343850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b3c46d8629a0c84e967e210ed0fb680, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _pauseDuration: 3

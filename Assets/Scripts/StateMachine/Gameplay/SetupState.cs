@@ -7,7 +7,9 @@ public class SetupState : GameplayState
     public override void Enter()
     {
         _activated = false;
-        GameManager.LoadCardEffects();
+
+        GameManager.LoadCardStats();
+        GameManager.Damage = 0;
     }
 
     public override void Tick()
