@@ -8,7 +8,8 @@ using UnityEngine.UI;
 public class DialogueController : MonoBehaviour
 {
     [SerializeField] DialogueManager _dialogueManager;
-    [SerializeField] private DialogueData[] _dialogueArray = null;
+    [SerializeField] public DialogueData[] _dialogueArray = new DialogueData[5];
+    [SerializeField] int _dialogueArraySize;
 
     private DialogueData _activeDialogueData;
     private int _dialogueIndex;
@@ -24,7 +25,7 @@ public class DialogueController : MonoBehaviour
         //_playerInput.onActionTriggered += PlayerInput_onActionTriggered;
 
         // Assign active dialogue and pass to manager if valid
-        if (_dialogueArray[_dialogueIndex] != null)
+        if (_dialogueArray.Length > 0)
         {
             _activeDialogueData = _dialogueArray[_dialogueIndex];
             _dialogueManager.StartDialogue(_activeDialogueData);

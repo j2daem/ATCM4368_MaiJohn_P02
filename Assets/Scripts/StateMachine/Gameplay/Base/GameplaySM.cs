@@ -6,6 +6,6 @@ public class GameplaySM : StateMachine
 {
     private void Start()
     {
-        ChangeState<PlayerState>();
+        ChangeState<SetupState>();
     }
 }

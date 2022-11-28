@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class DateTurnState : GameplayState
 {
-    private Actions _currentAction;
-    private Topics _currentTopic;
+    //private ActionType _currentAction;
 
     private void Awake()
     {
