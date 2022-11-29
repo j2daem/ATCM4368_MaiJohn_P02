@@ -37,14 +37,14 @@ public class Card : MonoBehaviour
     {
         if (!_cardSelected)
         {
-            transform.position += Vector3.up * 100;
+            transform.position += Vector3.up * 50;
             GameManager.SelectedCards.Add(this);
             _cardSelected = true;
         }
 
         else if (_cardSelected)
         {
-            transform.position -= Vector3.up * 100;
+            transform.position -= Vector3.up * 50;
             GameManager.SelectedCards.Remove(this);
             _cardSelected = false;
         }
@@ -52,8 +52,17 @@ public class Card : MonoBehaviour
 
     public void PlayCard()
     {
-        //GameManager.SelectedCards.Remove(this);
-        //GameManager.DiscardDeck.Add(this);
         gameObject.SetActive(false);
+        GameManager._availableCardSlots[HandIndex] = true;
+
+        MoveToDiscardDeck();
+    }
+
+    private void MoveToDiscardDeck()
+    {
+        _cardSelected = false;
+        GameManager.DiscardDeck.Add(this);
+        gameObject.SetActive(false);
+        //Debug.Log("Discard deck total: " + GameManager.DiscardDeck.Count);
     }
 }
