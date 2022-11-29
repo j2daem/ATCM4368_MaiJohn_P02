@@ -62,6 +62,8 @@ public class GameManager : MonoBehaviour
 
     public void DrawCard()
     {
+        _currentHandSize = VerifyCurrentHandSize();
+
         if (_currentHandSize < _maxHandSize)
         {
             if (_deck.Count > 0)
@@ -101,6 +103,21 @@ public class GameManager : MonoBehaviour
                 Debug.Log("Deck re-shuffled!");
             }
         }
+    }
+
+    private int VerifyCurrentHandSize()
+    {
+        int currentHandSize = 3;
+
+        for (int i = 0; i < _availableCardSlots.Length; i++)
+        {
+            if (_availableCardSlots[i])
+            {
+                currentHandSize--;
+            }
+        }
+
+        return currentHandSize;
     }
 
     public void PlaySelectedCards()
