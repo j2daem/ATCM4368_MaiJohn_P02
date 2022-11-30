@@ -9,38 +9,42 @@ public class UIManager : MonoBehaviour
     [Header("References")]
     [SerializeField] Health _playerHealth;
     [SerializeField] Slider _playerHealthBar;
-    [SerializeField] Health _dateHealth;
-    [SerializeField] Slider _dateHealthBar;
-    [SerializeField] TextMeshProUGUI _winText;
-    [SerializeField] TextMeshProUGUI _loseText;
-    //[SerializeField] Image _sliderFill;
-    //[SerializeField] Color _hurtColor;
+    [SerializeField] Health _enemyHealth;
+    [SerializeField] Slider _enemyHealthBar;
+    [SerializeField] GameObject _endPanel;
+    [SerializeField] TextMeshProUGUI _endText;
 
+    [Header("Settings")]
+    [SerializeField] string _winText = "You win!";
+    [SerializeField] string _loseText = "You lose...";
 
     private void Start()
     {
         _playerHealthBar.maxValue = _playerHealth.MaxHealth;
-        _playerHealthBar.value = _playerHealth.MaxHealth;
+        _playerHealthBar.value = _playerHealth.CurrentHealth;
 
-        _dateHealthBar.maxValue = _dateHealth.MaxHealth;
-        _dateHealthBar.value = _dateHealth.MaxHealth;
+        _enemyHealthBar.maxValue = _enemyHealth.MaxHealth;
+        _enemyHealthBar.value = _enemyHealth.CurrentHealth;
+
+        _endPanel.SetActive(false);
+        _endText.text = "";
     }
 
     private void OnEnable()
     {
         _playerHealth.HealthUpdated += UpdatePlayerHealthBar;
-        _dateHealth.HealthUpdated += UpdateBossHealthBar;
+        _enemyHealth.HealthUpdated += UpdateEnemyHealthBar;
         _playerHealth.Killed += DisplayLoseText;
-        _dateHealth.Killed += DisplayWinText;
+        _enemyHealth.Killed += DisplayWinText;
 
     }
 
     private void OnDisable()
     {
         _playerHealth.HealthUpdated -= UpdatePlayerHealthBar;
-        _dateHealth.HealthUpdated -= UpdatePlayerHealthBar;
+        _enemyHealth.HealthUpdated -= UpdatePlayerHealthBar;
         _playerHealth.Killed -= DisplayLoseText;
-        _dateHealth.Killed -= DisplayWinText;
+        _enemyHealth.Killed -= DisplayWinText;
     }
 
     void UpdatePlayerHealthBar()
@@ -48,22 +52,24 @@ public class UIManager : MonoBehaviour
         _playerHealthBar.value = _playerHealth.CurrentHealth;
     }
 
-    void UpdateBossHealthBar()
+    void UpdateEnemyHealthBar()
     {
-        _dateHealthBar.value = _dateHealth.CurrentHealth;
+        _enemyHealthBar.value = _enemyHealth.CurrentHealth;
         /*if (_bossHealth.CurrentHealth <= _playerHealth.MaxHealth / 2)
         {
             _sliderFill.color = _hurtColor;
         }*/
     }
 
-    void DisplayWinText()
+    public void DisplayWinText()
     {
-        _winText.enabled = true;
+        _endText.text = _winText;
+        _endPanel.SetActive(true);
     }
 
-    void DisplayLoseText()
+    public void DisplayLoseText()
     {
-        _loseText.enabled = true;
+        _endText.text = _loseText;
+        _endPanel.SetActive(true);
     }
 }

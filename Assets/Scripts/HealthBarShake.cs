@@ -13,12 +13,12 @@ public class HealthBarShake : MonoBehaviour
 
     private void OnEnable()
     {
-        _health.HealthUpdated += Shake;
+        _health.HealthDecreased += Shake;
     }
 
     private void OnDisable()
     {
-        _health.HealthUpdated -= Shake;
+        _health.HealthDecreased -= Shake;
     }
 
     public void Shake()

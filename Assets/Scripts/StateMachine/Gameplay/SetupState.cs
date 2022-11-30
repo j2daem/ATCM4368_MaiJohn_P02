@@ -9,7 +9,6 @@ public class SetupState : GameplayState
         _activated = false;
 
         GameManager.LoadCardStats();
-        GameManager.Damage = 0;
     }
 
     public override void Tick()

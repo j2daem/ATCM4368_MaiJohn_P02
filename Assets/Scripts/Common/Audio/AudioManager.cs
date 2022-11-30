@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class AudioManager : MonoBehaviour
 {
+    [Header("References")]
     [NonReorderable] public Sound[] _musicArray;
     [NonReorderable] public Sound[] _sfxArray;
     [SerializeField] Slider _musicVolumeSlider;
@@ -12,6 +13,11 @@ public class AudioManager : MonoBehaviour
 
     [SerializeField] string _mainThemeSong;
 
+    float _musicVolume;
+    float _sfxVolume;
+
+    public float MusicVolume => _musicVolume;
+    public float SFXVolume => _sfxVolume;
 
     public static AudioManager instance;
 
@@ -45,6 +51,7 @@ public class AudioManager : MonoBehaviour
 
             // Consider changing to something more efficient...
             _musicVolumeSlider.value = song.volume;
+            _musicVolume = song.volume;
         }
 
         foreach (Sound sfx in _sfxArray)
@@ -57,6 +64,7 @@ public class AudioManager : MonoBehaviour
             sfx.source.loop = sfx.loop;
 
             _sfxVolumeSlider.value = sfx.volume;
+            _sfxVolume = sfx.volume;
         }
         #endregion
     }
@@ -92,12 +100,24 @@ public class AudioManager : MonoBehaviour
         soundToPlay.source.Play();
     }
 
+    public void ReassignMusicSlider(Slider newSlider)
+    {
+        _musicVolumeSlider = newSlider;
+    }
+    
+    public void ReassignSFXSlider(Slider newSlider)
+    {
+        _sfxVolumeSlider = newSlider;
+    }
+
     public void AdjustMusicVolume()
     {
         foreach (Sound song in _musicArray)
         {
             song.source.volume = _musicVolumeSlider.value;
         }
+
+        _musicVolume = _musicVolumeSlider.value;
     }
 
     public void AdjustSFXVolume()
@@ -106,6 +126,8 @@ public class AudioManager : MonoBehaviour
         {
             sfx.source.volume = _sfxVolumeSlider.value;
         }
+
+        _sfxVolume = _sfxVolumeSlider.value;
     }
 
     // Code to play sound from this AudioManager script
