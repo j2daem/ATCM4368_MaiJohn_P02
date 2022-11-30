@@ -14,14 +14,14 @@ public class GameManager : MonoBehaviour
 {
     #region Variables
     [Header("References")]
-    [SerializeField] List<Card> _deck = new List<Card>();
-    [SerializeField] Transform[] _cardSlots;
+    [SerializeField] public List<Card> _deck = new List<Card>();
+    [SerializeField] public Transform[] _cardSlots;
     [SerializeField] public Health _playerHealth;
     [SerializeField] public Health _enemyHealth;
 
     [Header("Settings")]
-    [SerializeField] int[] _cardStats;
-    [SerializeField] int _cardsToPlay = 2;
+    [SerializeField] public int[] _cardStats;
+    [SerializeField] int _numCardsToPlay = 2;
 
     private List<Card> _selectedCards = new List<Card>();
     private List<Card> _playedCards = new List<Card>();
@@ -36,6 +36,7 @@ public class GameManager : MonoBehaviour
     public List<Card> SelectedCards => _selectedCards;
     public List<Card> PlayedCards => _playedCards;
     public List<Card> DiscardDeck => _discardDeck;
+    public int NumCardsToPlay => _numCardsToPlay;
     public int CurrentHandSize => _currentHandSize;
     public int MaxHandSize => _maxHandSize;
     public int HandIndex { get; set; }
@@ -68,7 +69,7 @@ public class GameManager : MonoBehaviour
         {
             if (_deck.Count > 0)
             {
-                Card selectedCard = _deck[UnityEngine.Random.Range(0, _deck.Count)];
+                Card selectedCard = ChooseRandomCard();
 
                 for (int i = 0; i < _availableCardSlots.Length; i++)
                 {
@@ -94,15 +95,50 @@ public class GameManager : MonoBehaviour
 
             else
             {
-                foreach(Card card in _discardDeck)
-                {
-                    _deck.Add(card);
-                }
+                ShuffleInDiscardDeck();
 
-                _discardDeck.Clear();
-                Debug.Log("Deck re-shuffled!");
+                Card selectedCard = ChooseRandomCard();
+
+                for (int i = 0; i < _availableCardSlots.Length; i++)
+                {
+                    if (_availableCardSlots[i])
+                    {
+                        //Debug.Log(selectedCard.CardName.text + " card drawn!");
+
+                        _availableCardSlots[i] = false;
+                        HandIndex = i;
+
+                        selectedCard.gameObject.SetActive(true);
+                        selectedCard.transform.position = _cardSlots[i].position;
+                        selectedCard.HandIndex = i;
+
+                        _deck.Remove(selectedCard);
+
+                        _currentHandSize++;
+                        Debug.Log("Current hand size: " + _currentHandSize);
+                        return;
+                    }
+                }
             }
         }
+    }
+
+    public Card ChooseRandomCard()
+    {
+        Card selectedCard = _deck[UnityEngine.Random.Range(0, _deck.Count - 1)];
+
+        return selectedCard;
+    }
+
+    public void ShuffleInDiscardDeck()
+    {
+        foreach (Card card in _discardDeck)
+        {
+            _deck.Add(card);
+        }
+
+        _discardDeck.Clear();
+        Debug.Log("Deck re-shuffled!");
     }
 
     private int VerifyCurrentHandSize()
@@ -122,9 +158,9 @@ public class GameManager : MonoBehaviour
 
     public void PlaySelectedCards()
     {
-        if (_selectedCards.Count == _cardsToPlay)
+        if (_selectedCards.Count == _numCardsToPlay)
         {
-            for (int i = 0; i < _cardsToPlay; i++)
+            for (int i = 0; i < _numCardsToPlay; i++)
             {
                 _selectedCards[i].PlayCard();
                 _playedCards.Add(_selectedCards[i]);
@@ -171,8 +207,6 @@ public class GameManager : MonoBehaviour
 
         int damage = _cardStats[firstCardEnumIndex] * _cardStats[secondCardEnumIndex];
 
-        _discardDeck.Add(_playedCards[0]);
-        _discardDeck.Add(_playedCards[1]);
         _playedCards.Clear();
         _currentHandSize -= 2;
 

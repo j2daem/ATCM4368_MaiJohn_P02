@@ -214,9 +214,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4018707852781081859, guid: 8bcf8f2181c845b469b80b0aa6cf9243, type: 3}
+      propertyPath: GameManager
+      value: 
+      objectReference: {fileID: 1980436432}
     - target: {fileID: 4018707852781081885, guid: 8bcf8f2181c845b469b80b0aa6cf9243, type: 3}
       propertyPath: m_Name
       value: FlirtCard_btn_05
+      objectReference: {fileID: 0}
+    - target: {fileID: 4018707852781081885, guid: 8bcf8f2181c845b469b80b0aa6cf9243, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8bcf8f2181c845b469b80b0aa6cf9243, type: 3}
@@ -537,9 +545,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4018707852781081859, guid: 8bcf8f2181c845b469b80b0aa6cf9243, type: 3}
+      propertyPath: GameManager
+      value: 
+      objectReference: {fileID: 1980436432}
     - target: {fileID: 4018707852781081885, guid: 8bcf8f2181c845b469b80b0aa6cf9243, type: 3}
       propertyPath: m_Name
       value: FlirtCard_btn_02
+      objectReference: {fileID: 0}
+    - target: {fileID: 4018707852781081885, guid: 8bcf8f2181c845b469b80b0aa6cf9243, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8bcf8f2181c845b469b80b0aa6cf9243, type: 3}
@@ -584,7 +600,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 202225409}
-  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: -0.70710677, w: 0.70710677}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -596,7 +612,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -125, y: 400}
+  m_AnchoredPosition: {x: -125, y: -375}
   m_SizeDelta: {x: 800, y: 100}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!114 &202225411
@@ -716,7 +732,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -748,6 +764,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1929154257}
     m_Modifications:
+    - target: {fileID: 4152854879150884884, guid: db42e592152ddd740a4c7cda0daf474f, type: 3}
+      propertyPath: GameManager
+      value: 
+      objectReference: {fileID: 1980436432}
     - target: {fileID: 4152854879150884885, guid: db42e592152ddd740a4c7cda0daf474f, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -835,6 +855,10 @@ PrefabInstance:
     - target: {fileID: 4152854879150884886, guid: db42e592152ddd740a4c7cda0daf474f, type: 3}
       propertyPath: m_Name
       value: JokeCard_btn_03
+      objectReference: {fileID: 0}
+    - target: {fileID: 4152854879150884886, guid: db42e592152ddd740a4c7cda0daf474f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: db42e592152ddd740a4c7cda0daf474f, type: 3}
@@ -954,7 +978,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 395308055}
-  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: -0.70710677, w: 0.70710677}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -966,7 +990,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 125, y: -400}
+  m_AnchoredPosition: {x: 125, y: 375}
   m_SizeDelta: {x: 800, y: 100}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &395308057
@@ -1046,6 +1070,10 @@ PrefabInstance:
     - target: {fileID: 5620012292190066768, guid: 6e8e8d4da1a26c9439e946c6784abf89, type: 3}
       propertyPath: m_Name
       value: InsultCard_btn_04
+      objectReference: {fileID: 0}
+    - target: {fileID: 5620012292190066768, guid: 6e8e8d4da1a26c9439e946c6784abf89, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5620012292190066769, guid: 6e8e8d4da1a26c9439e946c6784abf89, type: 3}
       propertyPath: m_Pivot.x
@@ -1131,6 +1159,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5620012292190066782, guid: 6e8e8d4da1a26c9439e946c6784abf89, type: 3}
+      propertyPath: GameManager
+      value: 
+      objectReference: {fileID: 1980436432}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6e8e8d4da1a26c9439e946c6784abf89, type: 3}
 --- !u!224 &455009937 stripped
@@ -1588,6 +1620,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ChatCard_btn_04
       objectReference: {fileID: 0}
+    - target: {fileID: 4729673865999797411, guid: 42814103e35e6494da20b03f6e050b28, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4729673865999797412, guid: 42814103e35e6494da20b03f6e050b28, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1672,6 +1708,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4729673865999797416, guid: 42814103e35e6494da20b03f6e050b28, type: 3}
+      propertyPath: GameManager
+      value: 
+      objectReference: {fileID: 1980436432}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 42814103e35e6494da20b03f6e050b28, type: 3}
 --- !u!224 &626180974 stripped
@@ -1836,6 +1876,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: InsultCard_btn_02
       objectReference: {fileID: 0}
+    - target: {fileID: 5620012292190066768, guid: 6e8e8d4da1a26c9439e946c6784abf89, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5620012292190066769, guid: 6e8e8d4da1a26c9439e946c6784abf89, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1920,6 +1964,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5620012292190066782, guid: 6e8e8d4da1a26c9439e946c6784abf89, type: 3}
+      propertyPath: GameManager
+      value: 
+      objectReference: {fileID: 1980436432}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6e8e8d4da1a26c9439e946c6784abf89, type: 3}
 --- !u!224 &748910002 stripped
@@ -1945,6 +1993,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1929154257}
     m_Modifications:
+    - target: {fileID: 4152854879150884884, guid: db42e592152ddd740a4c7cda0daf474f, type: 3}
+      propertyPath: GameManager
+      value: 
+      objectReference: {fileID: 1980436432}
     - target: {fileID: 4152854879150884885, guid: db42e592152ddd740a4c7cda0daf474f, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -2032,6 +2084,10 @@ PrefabInstance:
     - target: {fileID: 4152854879150884886, guid: db42e592152ddd740a4c7cda0daf474f, type: 3}
       propertyPath: m_Name
       value: JokeCard_btn_02
+      objectReference: {fileID: 0}
+    - target: {fileID: 4152854879150884886, guid: db42e592152ddd740a4c7cda0daf474f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: db42e592152ddd740a4c7cda0daf474f, type: 3}
@@ -2138,6 +2194,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: InsultCard_btn_05
       objectReference: {fileID: 0}
+    - target: {fileID: 5620012292190066768, guid: 6e8e8d4da1a26c9439e946c6784abf89, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5620012292190066769, guid: 6e8e8d4da1a26c9439e946c6784abf89, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -2222,6 +2282,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5620012292190066782, guid: 6e8e8d4da1a26c9439e946c6784abf89, type: 3}
+      propertyPath: GameManager
+      value: 
+      objectReference: {fileID: 1980436432}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6e8e8d4da1a26c9439e946c6784abf89, type: 3}
 --- !u!224 &835852975 stripped
@@ -2681,7 +2745,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 914112280}
-  - component: {fileID: 914112281}
   - component: {fileID: 914112283}
   - component: {fileID: 914112282}
   m_Layer: 5
@@ -2711,21 +2774,6 @@ RectTransform:
   m_AnchoredPosition: {x: -200, y: 162.5}
   m_SizeDelta: {x: 150, y: 225}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &914112281
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 914112279}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 581009b4277c0bb4ca43139a3a9e414c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _cardAction: 0
-  _cardName: {fileID: 0}
-  _cardBackground: {fileID: 0}
 --- !u!114 &914112282
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2901,6 +2949,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ChatCard_btn_05
       objectReference: {fileID: 0}
+    - target: {fileID: 4729673865999797411, guid: 42814103e35e6494da20b03f6e050b28, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4729673865999797412, guid: 42814103e35e6494da20b03f6e050b28, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -2985,6 +3037,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4729673865999797416, guid: 42814103e35e6494da20b03f6e050b28, type: 3}
+      propertyPath: GameManager
+      value: 
+      objectReference: {fileID: 1980436432}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 42814103e35e6494da20b03f6e050b28, type: 3}
 --- !u!224 &976784404 stripped
@@ -3092,6 +3148,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ChatCard_btn_03
       objectReference: {fileID: 0}
+    - target: {fileID: 4729673865999797411, guid: 42814103e35e6494da20b03f6e050b28, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4729673865999797412, guid: 42814103e35e6494da20b03f6e050b28, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -3176,6 +3236,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4729673865999797416, guid: 42814103e35e6494da20b03f6e050b28, type: 3}
+      propertyPath: GameManager
+      value: 
+      objectReference: {fileID: 1980436432}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 42814103e35e6494da20b03f6e050b28, type: 3}
 --- !u!224 &1090761636 stripped
@@ -3245,7 +3309,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -3280,6 +3344,10 @@ PrefabInstance:
     - target: {fileID: 5620012292190066768, guid: 6e8e8d4da1a26c9439e946c6784abf89, type: 3}
       propertyPath: m_Name
       value: InsultCard_btn_03
+      objectReference: {fileID: 0}
+    - target: {fileID: 5620012292190066768, guid: 6e8e8d4da1a26c9439e946c6784abf89, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5620012292190066769, guid: 6e8e8d4da1a26c9439e946c6784abf89, type: 3}
       propertyPath: m_Pivot.x
@@ -3365,6 +3433,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5620012292190066782, guid: 6e8e8d4da1a26c9439e946c6784abf89, type: 3}
+      propertyPath: GameManager
+      value: 
+      objectReference: {fileID: 1980436432}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6e8e8d4da1a26c9439e946c6784abf89, type: 3}
 --- !u!224 &1234471730 stripped
@@ -3434,7 +3506,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -3466,6 +3538,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1929154257}
     m_Modifications:
+    - target: {fileID: 4152854879150884884, guid: db42e592152ddd740a4c7cda0daf474f, type: 3}
+      propertyPath: GameManager
+      value: 
+      objectReference: {fileID: 1980436432}
     - target: {fileID: 4152854879150884885, guid: db42e592152ddd740a4c7cda0daf474f, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -3554,6 +3630,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: JokeCard_btn_04
       objectReference: {fileID: 0}
+    - target: {fileID: 4152854879150884886, guid: db42e592152ddd740a4c7cda0daf474f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: db42e592152ddd740a4c7cda0daf474f, type: 3}
 --- !u!224 &1379059214 stripped
@@ -3582,6 +3662,10 @@ PrefabInstance:
     - target: {fileID: 4729673865999797411, guid: 42814103e35e6494da20b03f6e050b28, type: 3}
       propertyPath: m_Name
       value: ChatCard_btn_02
+      objectReference: {fileID: 0}
+    - target: {fileID: 4729673865999797411, guid: 42814103e35e6494da20b03f6e050b28, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4729673865999797412, guid: 42814103e35e6494da20b03f6e050b28, type: 3}
       propertyPath: m_Pivot.x
@@ -3667,6 +3751,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4729673865999797416, guid: 42814103e35e6494da20b03f6e050b28, type: 3}
+      propertyPath: GameManager
+      value: 
+      objectReference: {fileID: 1980436432}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 42814103e35e6494da20b03f6e050b28, type: 3}
 --- !u!224 &1424114690 stripped
@@ -3852,9 +3940,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4018707852781081859, guid: 8bcf8f2181c845b469b80b0aa6cf9243, type: 3}
+      propertyPath: GameManager
+      value: 
+      objectReference: {fileID: 1980436432}
     - target: {fileID: 4018707852781081885, guid: 8bcf8f2181c845b469b80b0aa6cf9243, type: 3}
       propertyPath: m_Name
       value: FlirtCard_btn_04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4018707852781081885, guid: 8bcf8f2181c845b469b80b0aa6cf9243, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8bcf8f2181c845b469b80b0aa6cf9243, type: 3}
@@ -3883,7 +3979,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1637789899}
-  - component: {fileID: 1637789900}
   - component: {fileID: 1637789902}
   - component: {fileID: 1637789901}
   m_Layer: 5
@@ -3913,21 +4008,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 162.5}
   m_SizeDelta: {x: 150, y: 225}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1637789900
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1637789898}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 581009b4277c0bb4ca43139a3a9e414c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _cardAction: 1
-  _cardName: {fileID: 0}
-  _cardBackground: {fileID: 0}
 --- !u!114 &1637789901
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4199,6 +4279,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1929154257}
     m_Modifications:
+    - target: {fileID: 4152854879150884884, guid: db42e592152ddd740a4c7cda0daf474f, type: 3}
+      propertyPath: GameManager
+      value: 
+      objectReference: {fileID: 1980436432}
     - target: {fileID: 4152854879150884885, guid: db42e592152ddd740a4c7cda0daf474f, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -4286,6 +4370,10 @@ PrefabInstance:
     - target: {fileID: 4152854879150884886, guid: db42e592152ddd740a4c7cda0daf474f, type: 3}
       propertyPath: m_Name
       value: JokeCard_btn_05
+      objectReference: {fileID: 0}
+    - target: {fileID: 4152854879150884886, guid: db42e592152ddd740a4c7cda0daf474f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: db42e592152ddd740a4c7cda0daf474f, type: 3}
@@ -4654,9 +4742,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4018707852781081859, guid: 8bcf8f2181c845b469b80b0aa6cf9243, type: 3}
+      propertyPath: GameManager
+      value: 
+      objectReference: {fileID: 1980436432}
     - target: {fileID: 4018707852781081885, guid: 8bcf8f2181c845b469b80b0aa6cf9243, type: 3}
       propertyPath: m_Name
       value: FlirtCard_btn_03
+      objectReference: {fileID: 0}
+    - target: {fileID: 4018707852781081885, guid: 8bcf8f2181c845b469b80b0aa6cf9243, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8bcf8f2181c845b469b80b0aa6cf9243, type: 3}
@@ -4804,7 +4900,7 @@ MonoBehaviour:
   _playerHealth: {fileID: 480163198}
   _enemyHealth: {fileID: 2103488672}
   _cardStats: ffffffff000000000100000002000000
-  _cardsToPlay: 2
+  _numCardsToPlay: 2
 --- !u!1 &1985738850
 GameObject:
   m_ObjectHideFlags: 0
@@ -4856,7 +4952,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -5153,12 +5249,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b68809f47d46b4e4495799abb091fbf4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _uIManager: {fileID: 0}
   _playerCardEffects: {fileID: 2125897625}
   _positiveReactionSprite: {fileID: 1825046640}
   _negativeReactionSprite: {fileID: 572747346}
   _neutralReactionSprite: {fileID: 346048512}
-  _positiveReactionText: 'Their health decreased by '
+  _positiveReactionText: They're falling for you!
   _negativeReactionText: 'Their health increased by '
   _neutralReactionText: 'Their health changed by '
   _reactionTurnLength: 2
@@ -5304,6 +5399,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4018707852781081859, guid: 8bcf8f2181c845b469b80b0aa6cf9243, type: 3}
+      propertyPath: GameManager
+      value: 
+      objectReference: {fileID: 1980436432}
     - target: {fileID: 4018707852781081885, guid: 8bcf8f2181c845b469b80b0aa6cf9243, type: 3}
       propertyPath: m_Name
       value: FlirtCard_btn_01
@@ -5321,6 +5420,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1929154257}
     m_Modifications:
+    - target: {fileID: 4152854879150884884, guid: db42e592152ddd740a4c7cda0daf474f, type: 3}
+      propertyPath: GameManager
+      value: 
+      objectReference: {fileID: 1980436432}
     - target: {fileID: 4152854879150884885, guid: db42e592152ddd740a4c7cda0daf474f, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -5408,6 +5511,10 @@ PrefabInstance:
     - target: {fileID: 4152854879150884886, guid: db42e592152ddd740a4c7cda0daf474f, type: 3}
       propertyPath: m_Name
       value: JokeCard_btn_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 4152854879150884886, guid: db42e592152ddd740a4c7cda0daf474f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: db42e592152ddd740a4c7cda0daf474f, type: 3}
@@ -5510,6 +5617,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4729673865999797416, guid: 42814103e35e6494da20b03f6e050b28, type: 3}
+      propertyPath: GameManager
+      value: 
+      objectReference: {fileID: 1980436432}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 42814103e35e6494da20b03f6e050b28, type: 3}
 --- !u!1001 &5620012291603805990
@@ -5522,6 +5633,10 @@ PrefabInstance:
     - target: {fileID: 5620012292190066768, guid: 6e8e8d4da1a26c9439e946c6784abf89, type: 3}
       propertyPath: m_Name
       value: InsultCard_btn_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 5620012292190066768, guid: 6e8e8d4da1a26c9439e946c6784abf89, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5620012292190066769, guid: 6e8e8d4da1a26c9439e946c6784abf89, type: 3}
       propertyPath: m_Pivot.x
@@ -5607,5 +5722,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5620012292190066782, guid: 6e8e8d4da1a26c9439e946c6784abf89, type: 3}
+      propertyPath: GameManager
+      value: 
+      objectReference: {fileID: 1980436432}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6e8e8d4da1a26c9439e946c6784abf89, type: 3}

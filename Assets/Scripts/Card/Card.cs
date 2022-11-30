@@ -2,14 +2,6 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-/*public enum ActionType
-{
-    chat,
-    flirt,
-    insult,
-    joke
-}*/
-
 public class Card : MonoBehaviour
 {
 
@@ -17,7 +9,7 @@ public class Card : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _cardName;
     [SerializeField] private Image _cardBackground;
 
-    private GameManager GameManager;
+    [SerializeField] GameManager GameManager;
     private bool _cardSelected;
     private int _handIndex;
 
@@ -29,7 +21,6 @@ public class Card : MonoBehaviour
 
     private void Awake()
     {
-        GameManager = FindObjectOfType<GameManager>();
         _cardSelected = false;
     }
 
@@ -52,14 +43,14 @@ public class Card : MonoBehaviour
 
     public void PlayCard()
     {
-        gameObject.SetActive(false);
         GameManager._availableCardSlots[HandIndex] = true;
 
         MoveToDiscardDeck();
     }
 
-    private void MoveToDiscardDeck()
+    public void MoveToDiscardDeck()
     {
+        gameObject.SetActive(false);
         _cardSelected = false;
         GameManager.DiscardDeck.Add(this);
         gameObject.SetActive(false);

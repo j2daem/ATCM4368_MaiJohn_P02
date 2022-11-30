@@ -61,11 +61,11 @@ public class UIManager : MonoBehaviour
 
     public void DisplayWinText()
     {
-        _winText.enabled = true;
+        _winText.gameObject.SetActive(true);
     }
 
     public void DisplayLoseText()
     {
-        _loseText.enabled = true;
+        _loseText.gameObject.SetActive(true);
     }
 }

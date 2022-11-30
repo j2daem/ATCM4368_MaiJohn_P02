@@ -46,7 +46,7 @@ public class Health : MonoBehaviour
 
         _currentHealth -= damageAmount;
 
-        if (_currentHealth < 0)
+        if (_currentHealth <= 0)
         {
             _currentHealth = 0;
             Kill();

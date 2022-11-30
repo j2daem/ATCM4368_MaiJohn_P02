@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class PlayerCardsEffectState : GameplayState
 {
-    [SerializeField] UIManager _uIManager;
     [SerializeField] TextMeshProUGUI _playerCardEffects;
     [SerializeField] GameObject _positiveReactionSprite;
     [SerializeField] GameObject _negativeReactionSprite;
