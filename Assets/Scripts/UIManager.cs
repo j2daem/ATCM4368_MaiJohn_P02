@@ -11,10 +11,12 @@ public class UIManager : MonoBehaviour
     [SerializeField] Slider _playerHealthBar;
     [SerializeField] Health _enemyHealth;
     [SerializeField] Slider _enemyHealthBar;
-    [SerializeField] TextMeshProUGUI _winText;
-    [SerializeField] TextMeshProUGUI _loseText;
-    //[SerializeField] Image _sliderFill;
-    //[SerializeField] Color _hurtColor;
+    [SerializeField] GameObject _endPanel;
+    [SerializeField] TextMeshProUGUI _endText;
+
+    [Header("Settings")]
+    [SerializeField] string _winText = "You win!";
+    [SerializeField] string _loseText = "You lose...";
 
     private void Start()
     {
@@ -24,8 +26,8 @@ public class UIManager : MonoBehaviour
         _enemyHealthBar.maxValue = _enemyHealth.MaxHealth;
         _enemyHealthBar.value = _enemyHealth.CurrentHealth;
 
-        _winText.gameObject.SetActive(false);
-        _loseText.gameObject.SetActive(false);
+        _endPanel.SetActive(false);
+        _endText.text = "";
     }
 
     private void OnEnable()
@@ -61,11 +63,13 @@ public class UIManager : MonoBehaviour
 
     public void DisplayWinText()
     {
-        _winText.gameObject.SetActive(true);
+        _endText.text = _winText;
+        _endPanel.SetActive(true);
     }
 
     public void DisplayLoseText()
     {
-        _loseText.gameObject.SetActive(true);
+        _endText.text = _loseText;
+        _endPanel.SetActive(true);
     }
 }
