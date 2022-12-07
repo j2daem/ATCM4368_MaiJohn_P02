@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class WinState : GameplayState
 {
@@ -10,5 +11,10 @@ public class WinState : GameplayState
     {
         Debug.Log("Current State: Win State");
         uIManager.DisplayWinText();
+    }
+
+    public void LoadScene(string sceneName)
+    {
+        SceneManager.LoadScene(sceneName);
     }
 }

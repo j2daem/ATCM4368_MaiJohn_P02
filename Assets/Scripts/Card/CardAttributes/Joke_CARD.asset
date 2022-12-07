@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Joke_CARD
   m_EditorClassIdentifier: 
   _cardName: Joke
-  _cardColor: {r: 1, g: 1, b: 1, a: 1}
+  _cardColor: {r: 1, g: 0.7323232, b: 0, a: 1}

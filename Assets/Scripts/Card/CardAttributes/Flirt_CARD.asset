@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Flirt_CARD
   m_EditorClassIdentifier: 
   _cardName: Flirt
-  _cardColor: {r: 1, g: 0, b: 1, a: 1}
+  _cardColor: {r: 1, g: 0, b: 0.38118792, a: 1}

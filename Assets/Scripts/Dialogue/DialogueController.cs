@@ -10,7 +10,8 @@ public class DialogueController : MonoBehaviour
     [SerializeField] DialogueManager _dialogueManager;
     [SerializeField] public DialogueData[] _dialogueArray = new DialogueData[5];
     [SerializeField] int _dialogueArraySize;
-
+    [SerializeField] public GameObject _pauseMenu;
+    [SerializeField] string _nextSceneName;
     private DialogueData _activeDialogueData;
     private int _dialogueIndex;
     private bool _endCutscene;
@@ -20,7 +21,7 @@ public class DialogueController : MonoBehaviour
     {
         _dialogueIndex = 0;
         _endCutscene = false;
-        _playerInput = GetComponent<PlayerInput>();
+        //_playerInput = GetComponent<PlayerInput>();
 
         //_playerInput.onActionTriggered += PlayerInput_onActionTriggered;
 
@@ -56,8 +57,29 @@ public class DialogueController : MonoBehaviour
             // Reconsider loading a specific scene by name / string
             int currentActiveSceneIndex = SceneManager.GetActiveScene().buildIndex;
 
-            SceneManager.LoadScene(currentActiveSceneIndex + 1);
+            SceneManager.LoadScene(_nextSceneName);
         }
+    }
+
+    public void Pause(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            if (_pauseMenu.activeInHierarchy != true)
+            {
+                _pauseMenu.SetActive(true);
+            }
+
+            else
+            {
+                _pauseMenu.SetActive(false);
+            }
+        }
+    }
+
+    public void LoadScene(string sceneName)
+    {
+        SceneManager.LoadScene(sceneName);
     }
 
     private void IndexDialogue()

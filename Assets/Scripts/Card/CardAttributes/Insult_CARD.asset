@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Insult_CARD
   m_EditorClassIdentifier: 
   _cardName: Insult
-  _cardColor: {r: 1, g: 1, b: 0, a: 1}
+  _cardColor: {r: 0.6253203, g: 0.8584906, b: 0, a: 1}
