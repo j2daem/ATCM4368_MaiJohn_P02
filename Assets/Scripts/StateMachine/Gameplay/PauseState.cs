@@ -10,19 +10,15 @@ public class PauseState : GameplayState
     [SerializeField] GameObject _pauseMenuPanel;
     [SerializeField] Button _primaryButton;
 
-    private bool _paused;
-
     public override void Enter()
     {
         _primaryButton.Select();
         _pauseMenuPanel.SetActive(true);
-        _paused = true;
     }
 
     public override void Exit()
     {
         _pauseMenuPanel.SetActive(false);
-        _paused = false;
     }
 
     public void OnPressedBack()
@@ -30,18 +26,22 @@ public class PauseState : GameplayState
         StateMachine.RevertState();
     }
 
-/*    public override void PauseGame(InputAction.CallbackContext context)
+    public override void PauseGame(InputAction.CallbackContext context)
     {
-        if (context.action.triggered && _paused)
+        if (context.action.triggered)
         {
-            StateMachine.RevertState();
+            if (StateMachine.CurrentState is PauseState)
+            {
+                StateMachine.RevertState();
+            }
+
+            else
+            {
+                StateMachine.ChangeState<PauseState>();
+            }
         }
 
-        else
-        {
-            StateMachine.ChangeState<PauseState>();
-        }
-    }*/
+    }
 
     public void LoadScene(string sceneName)
     {
