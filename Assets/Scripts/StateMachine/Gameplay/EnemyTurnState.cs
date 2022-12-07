@@ -1,10 +1,18 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class EnemyTurnState : GameplayState
 {
+    [SerializeField] AudioClip _positiveReactionSFX;
+    [SerializeField] AudioClip _negativeReactionSFX;
+    [SerializeField] string _positiveReactionText;
+    [SerializeField] string _negativeReactionText;
+    [SerializeField] string _neutralReactionText;
+    [SerializeField] TextMeshProUGUI _enemyActionText;
+
     private List<Card> _enemyCards = new List<Card>();
     private List<Card> _cardsToPlay= new List<Card>();
 
@@ -144,6 +152,19 @@ public class EnemyTurnState : GameplayState
             }
         }
 
+
+        if (damage > 0)
+        {
+            _enemyActionText.text = _positiveReactionText;
+            AudioHelper.PlayClip2D(_positiveReactionSFX, .65f);
+        }
+
+        else if (damage < 0)
+        {
+            _enemyActionText.text = _negativeReactionText;
+            AudioHelper.PlayClip2D(_negativeReactionSFX, .65f);
+        }
+
         Debug.Log("Enemy dealt " + damage.ToString() + " damage.");
 
         GameManager._playerHealth.UpdateHealth(damage);
@@ -160,6 +181,12 @@ public class EnemyTurnState : GameplayState
         DrawCards();
         ChooseCards();
         PlayCards();
+
+        //_enemyActionText.gameObject.SetActive(true);
+
+        yield return new WaitForSeconds(pauseDuration);
+
+        //_enemyActionText.gameObject.SetActive(false);
 
         // Enemy performs action
         EnemyTurnEnded?.Invoke();

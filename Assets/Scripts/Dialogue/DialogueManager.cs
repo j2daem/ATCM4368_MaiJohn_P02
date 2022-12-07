@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _characterNameHolder;
     [SerializeField] private TextMeshProUGUI _dialogueHolder;
     [SerializeField] private TextMeshProUGUI _continueDialogue;
+    [SerializeField] private Image _portraitHolder;
 
     private bool _dialogueStarted = false;
     // Queue for FIFO
@@ -36,6 +38,11 @@ public class DialogueManager : MonoBehaviour
         foreach (string _dialogue in dialogueData.Dialogues){
             sentences.Enqueue(_dialogue);
         }
+
+/*        if (dialogueData.Portrait != null)
+        {
+            _portraitHolder.sprite = dialogueData.Portrait;
+        }*/
 
         // Automatically load in sentence into DialogueBox UI
         DisplayNextSentence();

@@ -13,6 +13,8 @@ public class PlayerCardsEffectState : GameplayState
     [SerializeField] string _negativeReactionText = "Their health increased by ";
     [SerializeField] string _neutralReactionText = "Their health changed by ";
     [SerializeField] float _reactionTurnLength = 1.5f;
+    [SerializeField] AudioClip _positiveReactionSFX;
+    [SerializeField] AudioClip _negativeReactionSFX;
 
     private string _reactionText;
     private string _reactionEnd;
@@ -63,6 +65,7 @@ public class PlayerCardsEffectState : GameplayState
             _positiveReactionSprite.SetActive(true);
             _negativeReactionSprite.SetActive(false);
             _neutralReactionSprite.SetActive(false);
+            AudioHelper.PlayClip2D(_positiveReactionSFX, .65f);
         }
 
         else if (_damage < 0)
@@ -72,6 +75,7 @@ public class PlayerCardsEffectState : GameplayState
             _negativeReactionSprite.SetActive(true);
             _positiveReactionSprite.SetActive(false);
             _neutralReactionSprite.SetActive(false);
+            AudioHelper.PlayClip2D(_negativeReactionSFX, .65f);
         }
 
         else

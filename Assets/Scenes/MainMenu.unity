@@ -2194,7 +2194,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Heartbreaker
+  m_text: Hearttaker
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3712,6 +3712,34 @@ PrefabInstance:
       propertyPath: _musicVolumeSlider
       value: 
       objectReference: {fileID: 2048462965}
+    - target: {fileID: 3009091641975130023, guid: 207c4cd9bc34b2c4aa02e342ba3ffca5, type: 3}
+      propertyPath: _sfxArray.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3009091641975130023, guid: 207c4cd9bc34b2c4aa02e342ba3ffca5, type: 3}
+      propertyPath: _sfxArray.Array.data[0].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 3880840a705dae44aabff53a2666e402, type: 3}
+    - target: {fileID: 3009091641975130023, guid: 207c4cd9bc34b2c4aa02e342ba3ffca5, type: 3}
+      propertyPath: _sfxArray.Array.data[0].name
+      value: Impressed
+      objectReference: {fileID: 0}
+    - target: {fileID: 3009091641975130023, guid: 207c4cd9bc34b2c4aa02e342ba3ffca5, type: 3}
+      propertyPath: _sfxArray.Array.data[1].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: c03cdde29a8be9348b111fe8f9fdfca9, type: 3}
+    - target: {fileID: 3009091641975130023, guid: 207c4cd9bc34b2c4aa02e342ba3ffca5, type: 3}
+      propertyPath: _sfxArray.Array.data[1].name
+      value: Unimpressed
+      objectReference: {fileID: 0}
+    - target: {fileID: 3009091641975130023, guid: 207c4cd9bc34b2c4aa02e342ba3ffca5, type: 3}
+      propertyPath: _sfxArray.Array.data[0].volume
+      value: 0.65
+      objectReference: {fileID: 0}
+    - target: {fileID: 3009091641975130023, guid: 207c4cd9bc34b2c4aa02e342ba3ffca5, type: 3}
+      propertyPath: _sfxArray.Array.data[1].volume
+      value: 0.65
+      objectReference: {fileID: 0}
     - target: {fileID: 3009091641975130024, guid: 207c4cd9bc34b2c4aa02e342ba3ffca5, type: 3}
       propertyPath: m_Name
       value: AudioManager

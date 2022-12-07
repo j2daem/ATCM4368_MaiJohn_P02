@@ -10,11 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d4171d304483ad646a97127e54ffefda, type: 3}
-  m_Name: Intro_Character_DLG
+  m_Name: Character02_DLG
   m_EditorClassIdentifier: 
   _characterName: Protagonist
   _dialogue:
-  - Hm, this looks like the right place...
-  - 
-  - Hello???
+  - Alrighty, time to put my plan into action!
+  - 'Operation: Hearttaker is on!'
   _portrait: {fileID: 0}

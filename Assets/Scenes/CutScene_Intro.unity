@@ -171,8 +171,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _dialogueManager: {fileID: 81970233}
   _dialogueArray:
-  - {fileID: 11400000, guid: 133183bf44627ae45b8916fd54abed09, type: 2}
-  - {fileID: 11400000, guid: 91bae8fe7761a2c4abad923a82e91061, type: 2}
+  - {fileID: 11400000, guid: bbad85a8f49310042bb64ef4793f7a49, type: 2}
+  - {fileID: 11400000, guid: 89e8388f5de63104295a321492a895ee, type: 2}
+  - {fileID: 11400000, guid: a63e2571514788b4c9587249f9b9ff7f, type: 2}
+  - {fileID: 11400000, guid: 31d46281e1939fa498766d5ff5181dd9, type: 2}
   _dialogueArraySize: 2
   _pauseMenu: {fileID: 1850021530}
   _nextSceneName: Level01
@@ -191,6 +193,7 @@ MonoBehaviour:
   _characterNameHolder: {fileID: 1252602049}
   _dialogueHolder: {fileID: 916231728}
   _continueDialogue: {fileID: 1787594266}
+  _portraitHolder: {fileID: 0}
 --- !u!114 &81970234
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1339,7 +1342,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5232962379101642314, guid: a5ffe5b9a4a1e3c46a214c6e5dc66185, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5232962379101642314, guid: a5ffe5b9a4a1e3c46a214c6e5dc66185, type: 3}
       propertyPath: m_AnchorMax.x
@@ -1575,7 +1578,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.76, g: 0.76, b: 0.76, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1

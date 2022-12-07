@@ -10,11 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d4171d304483ad646a97127e54ffefda, type: 3}
-  m_Name: Intro_Character_DLG
+  m_Name: Intro_DLG 1
   m_EditorClassIdentifier: 
   _characterName: Protagonist
   _dialogue:
-  - Hm, this looks like the right place...
-  - 
-  - Hello???
+  - Yup, this is the right place.
+  - Looks like I got here first before my date tonight...
+  - Great! This gives me plenty of time to think about what I'll say to make them
+    fall head over heels for me.
+  - And once they do... I'll completely and utterly break their heart!
+  - Okay, okay, remember the plan...
   _portrait: {fileID: 0}
